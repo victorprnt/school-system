@@ -2,18 +2,28 @@ import java.util.ArrayList;
 
 public class Teacher extends Worker {
   private String disciplineName;
+  private Boolean isCoord;
 
-  public Teacher(String name, String lastName, String cpf, double salary, String disciplineName) {
+  public Teacher(String name, String lastName, String cpf, double salary, String disciplineName, Boolean isCoord) {
     super(name, lastName, cpf, salary);
     this.disciplineName = disciplineName;
+    this.isCoord = isCoord;
   }
 
   public String getDisciplineName() {
     return disciplineName;
   }
 
+  public Boolean getIsCoord() {
+    return isCoord;
+  }
+
   public void setDisciplineName(String disciplineName) {
     this.disciplineName = disciplineName;
+  }
+
+  public void setIsCoord(boolean isCoord) {
+    this.isCoord = isCoord;
   }
 
   public void printAllInformation() {
@@ -36,6 +46,14 @@ public class Teacher extends Worker {
   public void getStudentsList(ArrayList<Student> students) {
     for (Student student : students) {
       student.getStudentInfo(student);
+    }
+  }
+
+  public void getInfoAboutCoordination(Teacher teacher) {
+    if (teacher.getIsCoord()) {
+      System.out.println("The teacher " + teacher.getName() + "is a Coordinator");
+    } else {
+      System.out.println("The teacher " + teacher.getName() + "is NOT a Coordinator");
     }
   }
 }
