@@ -44,4 +44,10 @@ public abstract class Student {
   public void setLegalGuardianName(String legalGuardianName) {
     this.legalGuardianName = legalGuardianName;
   }
+
+  public void getStudentInfo(Student student) {
+    System.out.println(
+        "The student " + student.getName() + " " + student.getLastName() + " is registered under "
+            + student.getRegistrationNumber() + " and his legal guardian is " + student.getLegalGuardianName());
+  }
 }

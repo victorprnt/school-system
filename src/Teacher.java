@@ -35,9 +35,7 @@ public class Teacher extends Worker {
 
   public void getStudentsList(ArrayList<Student> students) {
     for (Student student : students) {
-      System.out.println(
-          "The student " + student.getName() + " " + student.getLastName() + " is registered under "
-              + student.getRegistrationNumber() + " and his legal guardian is " + student.getLegalGuardianName());
+      student.getStudentInfo(student);
     }
   }
 }
