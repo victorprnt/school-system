@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Teacher extends Worker {
   private String disciplineName;
 
@@ -29,5 +31,13 @@ public class Teacher extends Worker {
 
   public void getJobDescription() {
     System.out.println("Teacher " + getName() + " teaches " + getDisciplineName());
+  }
+
+  public void getStudentsList(ArrayList<Student> students) {
+    for (Student student : students) {
+      System.out.println(
+          "The student " + student.getName() + " " + student.getLastName() + " is registered under "
+              + student.getRegistrationNumber() + " and his legal guardian is " + student.getLegalGuardianName());
+    }
   }
 }

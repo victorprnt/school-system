@@ -9,8 +9,19 @@ public class App {
 
     teachers.add(teacher_01);
     teachers.add(teacher_02);
-
     System.out.println(teachers.get(0).getName());
-    System.out.println(teachers.get(1));
+    System.out.println(teachers.get(1).getName());
+
+    ArrayList<Student> students = new ArrayList<Student>();
+    HighSchoolStudent highSchoolStudent_01 = new HighSchoolStudent("Chris", "Rog", "6789", "Carter", "1A");
+    HighSchoolStudent highSchoolStudent_02 = new HighSchoolStudent("Elizabeth", "Ols", "3456", "Carol", "82C");
+
+    students.add(highSchoolStudent_01);
+    students.add(highSchoolStudent_02);
+    System.out.println(students.get(0).getName());
+    System.out.println(students.get(1).getName());
+
+    teachers.get(0).getStudentsList(students);
+
   }
 }
