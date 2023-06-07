@@ -51,9 +51,9 @@ public class Teacher extends Worker {
 
   public void getInfoAboutCoordination(Teacher teacher) {
     if (teacher.getIsCoord()) {
-      System.out.println("The teacher " + teacher.getName() + "is a Coordinator");
+      System.out.println("The teacher " + teacher.getName() + " is a Coordinator");
     } else {
-      System.out.println("The teacher " + teacher.getName() + "is NOT a Coordinator");
+      System.out.println("The teacher " + teacher.getName() + " is NOT a Coordinator");
     }
   }
 }
